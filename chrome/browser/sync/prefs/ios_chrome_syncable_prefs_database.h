@@ -2,12 +2,14 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#ifndef IOS_CHROME_BROWSER_PREFS_IOS_CHROME_SYNCABLE_PREFS_DATABASE_H_
-#define IOS_CHROME_BROWSER_PREFS_IOS_CHROME_SYNCABLE_PREFS_DATABASE_H_
+#ifndef IOS_CHROME_BROWSER_SYNC_PREFS_IOS_CHROME_SYNCABLE_PREFS_DATABASE_H_
+#define IOS_CHROME_BROWSER_SYNC_PREFS_IOS_CHROME_SYNCABLE_PREFS_DATABASE_H_
 
 #include "components/sync_preferences/syncable_prefs_database.h"
 
 #include "components/sync_preferences/common_syncable_prefs_database.h"
+
+namespace browser_sync {
 
 class IOSChromeSyncablePrefsDatabase
     : public sync_preferences::SyncablePrefsDatabase {
@@ -21,4 +23,6 @@ class IOSChromeSyncablePrefsDatabase
   sync_preferences::CommonSyncablePrefsDatabase common_syncable_prefs_database_;
 };
 
-#endif  // IOS_CHROME_BROWSER_PREFS_IOS_CHROME_SYNCABLE_PREFS_DATABASE_H_
+}  // namespace browser_sync
+
+#endif  // IOS_CHROME_BROWSER_SYNC_PREFS_IOS_CHROME_SYNCABLE_PREFS_DATABASE_H_
