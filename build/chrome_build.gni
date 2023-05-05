@@ -89,7 +89,7 @@ if (target_environment == "catalyst") {
 
 # Configure is_official_release.
 if (is_official_build && is_chrome_branded) {
-  is_official_release = enable_dsyms && target_environment == "device" &&
+  is_official_release = enable_dsyms && target_environment == "device" || target_environment == "appletvos") &&
                         current_toolchain == default_toolchain
 } else {
   is_official_release = false
