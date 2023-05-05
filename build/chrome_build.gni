@@ -83,7 +83,7 @@ breakpad_enabled = is_official_build && is_chrome_branded
 
 if (breakpad_enabled) {
   breakpad_enabled_as_int = 1
-  is_official_release = enable_dsyms && target_environment == "device" &&
+  is_official_release = enable_dsyms && (target_environment == "device" || target_environment == "appletvos") &&
                         current_toolchain == default_toolchain
 } else {
   breakpad_enabled_as_int = 0
